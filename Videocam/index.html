@@ -56,18 +56,41 @@
                     ПОД КЛЮЧ
                 </p>
 
-                <form class="order-call">
-                    <input type="hidden" name="project_name" value="VIDEOCAM | Установка видеонаблюдения">
-		            <input type="hidden" name="admin_email" value="maskot2002@yandex.ru">
-		            <input type="hidden" name="form_subject" value="Новая заявка">
-		            <!-- END Hidden Required Fields -->
-                    <p class="order-call__info">
-                        <input type="text" class="info__field" name="Name" placeholder="Имя" required><br>
-                        <input type="email" class="info__field" name="E-mail" placeholder="E-mail" required><br>
-                        <input type="tel" class="info__field" name="Phone" pattern="(\+?\d[- .]*){7,13}" placeholder="Телефон +78965432100"><br>
-                        <button type="submit" class="info__btn">ЗАКАЗАТЬ ЗВОНОК</button>
-                    </p>
-                </form>
+                <form method="post" enctype="multipart/form-data" class="order-call__info SendMail">
+                    <input type="hidden" name="type_name" value="Скрытое поле, здесь можно написать название формы или страницы, чтобы отличать разные формы">
+                    <div class="input-box">
+                      <input
+                        type="text"
+                        placeholder="Ваше имя"
+                        name="fio"
+                        id="name"
+                        data-reg="^[А-ЯЁ][а-яё]*$"
+                        class="info__field"
+                      />
+                    </div>
+                    <div class="input-box">
+                      <input
+                        type="text"
+                        placeholder="Введите email"
+                        name="email"
+                        id="email"
+                        data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+                        class="info__field"
+                      />
+                    </div>
+                    <div class="input-box">
+                      <input
+                        type="text"
+                        placeholder="Введите телефон"
+                        name="phone"
+                        id="phone"
+                        data-reg="^((\+7|7|8)+([0-9]){10})$"
+                        class="info__field"
+                      />
+                    </div>
+                    
+                    <button type="submit" class="info__btn">Отправить сообщение</button>
+                  </form>
             </div>
         </section>
 
@@ -289,6 +312,7 @@
         </div>
     </footer>
 
+    <script src="/vg/www/templates/modules/mail/js/mail.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/slider.js"></script>
