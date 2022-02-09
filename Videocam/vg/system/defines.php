@@ -9,7 +9,7 @@ define("_ADMIN_EMAIL_", "videocam68@mail.ru");
 define('_MAIL_TYPE_', 'SMTP');
 define('_SMTP_HOST_', 'smtp.yandex.ru');
 define('_SMTP_LOGIN_', 'videocambot@yandex.ru'); // email с которого будут отправлятся письма
-define('_SMTP_PASSWORD_', 'iiGoNs97v'); // пароль от почты с которой будут отправлятся письма
+define('_SMTP_PASSWORD_', ''); // пароль от почты с которой будут отправлятся письма
 define('_SMTP_SECURE_', 'ssl'); // tls
 define('_SMTP_PORT_', 465);
 
